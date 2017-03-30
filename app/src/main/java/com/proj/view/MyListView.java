@@ -159,7 +159,6 @@ public class MyListView extends ListView {
 
 	/**
 	 * 添加一个等待布局
-	 * @param layout
 	 * @author Tony
 	 * @date 2014-1-2 下午12:00:21
 	 */

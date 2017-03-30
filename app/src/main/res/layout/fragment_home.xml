@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:ripple="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    
+    <LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@color/title_bg"
+	    android:gravity="center_vertical"
+	    android:id="@+id/layout_top"
+	    android:orientation="horizontal" >
+		<com.proj.view.SizeAdjustingTextView
+	        style="@style/title"
+	        android:id="@+id/txt_title"
+	        android:layout_width="0dp"
+	        android:text="@string/app_name"
+	        android:paddingTop="10dp"
+	        android:paddingBottom="10dp"
+	        android:layout_weight="1"
+	        android:layout_height="wrap_content" />
+	
+	</LinearLayout>
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="跳转到列表界面" />
+
+</LinearLayout>

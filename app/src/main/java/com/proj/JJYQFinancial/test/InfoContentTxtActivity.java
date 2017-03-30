@@ -3,11 +3,13 @@ package com.proj.JJYQFinancial.test;
 
 import com.proj.JJYQFinancial.BaseActivityHeader;
 import com.proj.JJYQFinancial.R;
+import com.proj.JJYQFinancial.R2;
 import com.proj.JJYQFinancial.utils.EXDateHelper;
 
 import android.widget.TextView;
+
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 
 
 /**
@@ -15,9 +17,9 @@ import butterknife.InjectView;
  */
 public class InfoContentTxtActivity extends BaseActivityHeader{
 	
-	@InjectView(R.id.textView1) TextView txtTitle;
-	@InjectView(R.id.textView2) TextView txtTime;
-	@InjectView(R.id.textView3) TextView txtContent;
+	@BindView(R2.id.textView1) TextView txtTitle;
+	@BindView(R2.id.textView2) TextView txtTime;
+	@BindView(R2.id.textView3) TextView txtContent;
 
 	private Information mInfo;
 	
@@ -26,7 +28,7 @@ public class InfoContentTxtActivity extends BaseActivityHeader{
 	@Override
 	protected void getViews() {
 		setContentView(R.layout.activity_info_content_txt);
-		ButterKnife.inject(this);
+		ButterKnife.bind(this);
 		
 	}
 

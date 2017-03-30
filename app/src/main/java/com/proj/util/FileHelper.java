@@ -107,16 +107,13 @@ public class FileHelper {
 		back.append(context.getFilesDir().getAbsolutePath());
 		return back.toString();
 	}
-	
+
 	/**
 	 * 获取文件存放路径（程序内部）
 	 * @param context
-	 * @param fileType
 	 * @param fileName
-	 * @return
-	 * @author Tony
-	 * @date 2013-12-26 上午10:27:39
-	 */
+     * @return
+     */
 	public static String getFilePathSaveInApp(Context context,String fileName) {
 		StringBuilder back = new StringBuilder();
 		back.append(getAppFilePath(context));

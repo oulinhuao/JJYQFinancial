@@ -37,7 +37,7 @@ public class ServiceFragment extends MyBaseFragment{
 	}
 	
 	protected void getViews() {
-		ButterKnife.inject(this,mRootView);
+		ButterKnife.bind(this,mRootView);
 	}
 	
 	protected void setListeners() {

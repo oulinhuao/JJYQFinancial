@@ -110,7 +110,7 @@ public class BaseFragmentActivityHeader extends BaseFragmentActivity{
 	/**
 	 * 设置界面顶部事件
 	 * ：返回按钮点击后会调用onBackPressed();
-	 * @param titleRes 标题文字资源id
+	 * @param title
 	 */
 	public void setTitle(String title){
 		if(mLayoutTop == null){

@@ -1,0 +1,50 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.proj.JJYQFinancial.MainActivity" >
+
+    <RadioGroup
+	    android:id="@+id/main_menu"
+	    android:orientation="horizontal"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content" 
+	    android:layout_alignParentBottom="true"
+	    android:paddingTop="2dp"
+	    android:paddingBottom="2dp"
+	    >
+	
+	    <RadioButton
+	        android:id="@+id/main_rdbtn_main"
+	        style="@style/button_tab"
+	        android:layout_width="0dp"
+	        android:layout_weight="1"
+	        android:layout_height="wrap_content"
+	        android:checked="true"
+	        android:text="首页" />
+	
+	    <RadioButton
+	        android:id="@+id/main_rdbtn_product"
+	        style="@style/button_tab"
+	        android:layout_width="0dp"
+	        android:layout_weight="1"
+	        android:layout_height="wrap_content"
+	        android:text="金融产品" />
+	    
+	    <RadioButton
+	        android:id="@+id/main_rdbtn_service"
+	        style="@style/button_tab"
+	        android:layout_width="0dp"
+	        android:layout_weight="1"
+	        android:layout_height="wrap_content"
+	        android:text="个性服务" />
+	</RadioGroup>
+	
+	<FrameLayout
+        android:id="@+id/content"
+        android:layout_above="@id/main_menu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </FrameLayout>
+
+</RelativeLayout>

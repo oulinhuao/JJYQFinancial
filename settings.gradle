@@ -1,2 +1,2 @@
 include ':app'
-include '../AndroidLib:AndroidLibModule'
+include ':../AndroidLib:AndroidLibModule'

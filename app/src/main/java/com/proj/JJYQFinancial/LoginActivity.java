@@ -2,7 +2,6 @@ package com.proj.JJYQFinancial;
 
 import java.lang.ref.WeakReference;
 
-import com.proj.JJYQFinancial.R;
 import com.proj.androidlib.BaseActivity;
 
 import android.os.Handler;

@@ -11,9 +11,6 @@ import java.util.Locale;
 
 /**
  * 日期工具类
- * 
- * @author Ivan
- * @date 2013-5-6 下午10:13:15
  */
 @SuppressLint("SimpleDateFormat")
 public class EXDateHelper {
@@ -246,15 +243,13 @@ public class EXDateHelper {
 		}
 		return dt2.getTime();
 	}
-	
+
 	/**
 	 * 当前日期增加几月
-	 * 
-	 * @param date
-	 *            当前日期(yyyy年MM月)
+	 * @param dateLong
 	 * @param n
-	 *            月数
-	 */
+     * @return
+     */
 	public static long addMonth(long dateLong, int n) {
 		try {
 			Date dt = new Date(dateLong);

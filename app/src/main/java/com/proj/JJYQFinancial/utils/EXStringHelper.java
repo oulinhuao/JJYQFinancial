@@ -440,11 +440,10 @@ public class EXStringHelper {
 	/**
 	 * 获取时间字符串
 	 * 
-	 * @param cTime
+	 * @param dstTime
 	 * @param dstTime
 	 * @return
 	 * @author Tony
-	 * @date 2014年12月17日 下午11:05:39
 	 */
 	public static String getDateBeforStr(long dstTime) {
 		String back = "";

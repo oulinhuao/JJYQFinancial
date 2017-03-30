@@ -98,13 +98,14 @@ public class InformationService extends BaseService{
 		}
 		return result;
 	}
+
 	/**
 	 * 翻页获取列表
 	 * @param pageSize
 	 * @param pageIndex
-	 * @param cid
-	 * @return
-	 */
+	 * @param type
+     * @return
+     */
 	public List<Information> getEntityListPaged(int pageSize, int pageIndex,
 			int type) {
 		List<Information> list = new ArrayList<Information>();

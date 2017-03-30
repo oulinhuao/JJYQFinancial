@@ -1,16 +1,11 @@
 package com.proj.JJYQFinancial;
 
 import java.lang.ref.WeakReference;
-import java.lang.reflect.Field;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
 
 import com.proj.JJYQFinancial.test.InfoListActivity;
 import com.proj.androidlib.tool.LogHelper;
 
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 import butterknife.OnClick;
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,7 +14,6 @@ import android.os.Message;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 
 /**
  * 主页
@@ -49,7 +43,7 @@ public class HomeFragment extends MyBaseFragment{
 	}
 	
 	protected void getViews() {
-		ButterKnife.inject(this,mRootView);
+		ButterKnife.bind(this,mRootView);
 	}
 	
 	protected void setListeners() {

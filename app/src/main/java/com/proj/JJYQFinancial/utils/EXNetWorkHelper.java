@@ -5,14 +5,14 @@ import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map.Entry;
 
-import org.apache.http.HttpResponse;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.params.BasicHttpParams;
+//import org.apache.http.HttpResponse;
+//import org.apache.http.client.methods.HttpPost;
+//import org.apache.http.entity.StringEntity;
+//import org.apache.http.impl.client.DefaultHttpClient;
+//import org.apache.http.params.BasicHttpParams;
+//import org.apache.http.util.EntityUtils;
 import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
-import org.apache.http.util.EntityUtils;
 import org.ksoap2.SoapEnvelope;
 import org.ksoap2.serialization.SoapObject;
 import org.ksoap2.serialization.SoapSerializationEnvelope;
@@ -236,71 +236,72 @@ public class EXNetWorkHelper {
 	 */
 	public static String getWSData(String webServiceUrl, String webMethod,
 			int returnType, HashMap<String, Object> map) {
-		String result = "";
-		StringBuilder sBuilder = null;
-		if(map != null){
-			sBuilder = new StringBuilder("{");
-			int i = 0;
-			// 使用迭代器映射map实例
-			Iterator iterator = map.entrySet().iterator();
-			while (iterator.hasNext()) {
-				if (i > 0)
-					sBuilder.append(",");
-				Entry entry = (Entry) iterator.next();
-				Object key = entry.getKey();
-				Object val = entry.getValue();
-				sBuilder.append(key.toString());
-				sBuilder.append(":'");
-				sBuilder.append(val.toString());
-				sBuilder.append("'");
-				i++;
-			}
-			sBuilder.append("}");
-		}
-		if (!ConnectionChangeReceiver.NET_WORK_ACTIVE)
-			return REQUEST_ERROR_STR_3;
-		try {
-			String url = "";
-			if(TextUtils.isEmpty(webMethod)){
-				url = webServiceUrl;
-			}else{
-				url = webServiceUrl + "/" + webMethod;
-			}
-			HttpPost request = new HttpPost(url);
-			if(sBuilder != null){
-				request.setEntity(new StringEntity(sBuilder.toString()));
-			}
-			switch (returnType) {
-			case RERURN_TYPE_XML:
-				request.setHeader("Content-Type", "application/soap+xml");
-				break;
-			case RERURN_TYPE_JSON:
-				request.setHeader("Content-Type", "application/json");
-				break;
-			default:
-				request.setHeader("Content-Type",
-						"application/x-www-form-urlencoded");
-				break;
-			}
-			HttpParams params = new BasicHttpParams();
-			/* 连接超时 */
-			HttpConnectionParams.setConnectionTimeout(params, TIME_OUT);
-			/* 请求超时 */
-			HttpConnectionParams.setSoTimeout(params, TIME_OUT);
-			HttpResponse httpResponse = new DefaultHttpClient(params)
-					.execute(request);
-			int statusCode = httpResponse.getStatusLine().getStatusCode();
-			if (statusCode == 200) {
-				result = EntityUtils.toString(httpResponse.getEntity());
-				return result;
-			} else {
-				LogHelper.customLogging(null, "statusCode:" + statusCode);
-				return REQUEST_ERROR_STR_1;
-			}
-		} catch (Exception e) {
-			LogHelper.errorLogging(e.getMessage());
-			return REQUEST_ERROR_STR_2;
-		}
+		return "";
+//		String result = "";
+//		StringBuilder sBuilder = null;
+//		if(map != null){
+//			sBuilder = new StringBuilder("{");
+//			int i = 0;
+//			// 使用迭代器映射map实例
+//			Iterator iterator = map.entrySet().iterator();
+//			while (iterator.hasNext()) {
+//				if (i > 0)
+//					sBuilder.append(",");
+//				Entry entry = (Entry) iterator.next();
+//				Object key = entry.getKey();
+//				Object val = entry.getValue();
+//				sBuilder.append(key.toString());
+//				sBuilder.append(":'");
+//				sBuilder.append(val.toString());
+//				sBuilder.append("'");
+//				i++;
+//			}
+//			sBuilder.append("}");
+//		}
+//		if (!ConnectionChangeReceiver.NET_WORK_ACTIVE)
+//			return REQUEST_ERROR_STR_3;
+//		try {
+//			String url = "";
+//			if(TextUtils.isEmpty(webMethod)){
+//				url = webServiceUrl;
+//			}else{
+//				url = webServiceUrl + "/" + webMethod;
+//			}
+//			HttpPost request = new HttpPost(url);
+//			if(sBuilder != null){
+//				request.setEntity(new StringEntity(sBuilder.toString()));
+//			}
+//			switch (returnType) {
+//			case RERURN_TYPE_XML:
+//				request.setHeader("Content-Type", "application/soap+xml");
+//				break;
+//			case RERURN_TYPE_JSON:
+//				request.setHeader("Content-Type", "application/json");
+//				break;
+//			default:
+//				request.setHeader("Content-Type",
+//						"application/x-www-form-urlencoded");
+//				break;
+//			}
+//			HttpParams params = new BasicHttpParams();
+//			/* 连接超时 */
+//			HttpConnectionParams.setConnectionTimeout(params, TIME_OUT);
+//			/* 请求超时 */
+//			HttpConnectionParams.setSoTimeout(params, TIME_OUT);
+//			HttpResponse httpResponse = new DefaultHttpClient(params)
+//					.execute(request);
+//			int statusCode = httpResponse.getStatusLine().getStatusCode();
+//			if (statusCode == 200) {
+//				result = EntityUtils.toString(httpResponse.getEntity());
+//				return result;
+//			} else {
+//				LogHelper.customLogging(null, "statusCode:" + statusCode);
+//				return REQUEST_ERROR_STR_1;
+//			}
+//		} catch (Exception e) {
+//			LogHelper.errorLogging(e.getMessage());
+//			return REQUEST_ERROR_STR_2;
+//		}
 	}
 	
 	/**

@@ -2,14 +2,14 @@ package com.proj.JJYQFinancial;
 
 import com.proj.androidlib.tool.LogHelper;
 
-import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
+
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
 
 public class MainActivity extends BaseFragmentActivityHeader implements OnCheckedChangeListener {
 
@@ -18,15 +18,15 @@ public class MainActivity extends BaseFragmentActivityHeader implements OnChecke
 	// 使用了第三方的几个jar包 libs目录下butterknife-6.0.0.jar。使用方法 可以自行百度
 	// 一般 从布局文件中拿控件、绑定click事件 都可以用这个框架
 	
-	@InjectView(R.id.main_menu) RadioGroup mRadioGroup;
+	@BindView(R2.id.main_menu) RadioGroup mRadioGroup;
 	
 	
 	/**主页*/
-	@InjectView(R.id.main_rdbtn_main) RadioButton mRDBtnMain;
+	@BindView(R2.id.main_rdbtn_main) RadioButton mRDBtnMain;
 	/**金融产品*/
-	@InjectView(R.id.main_rdbtn_product) RadioButton mRDBtnProdect;
+	@BindView(R2.id.main_rdbtn_product) RadioButton mRDBtnProdect;
 	/**个性服务*/
-	@InjectView(R.id.main_rdbtn_service) RadioButton mRDBtnService;
+	@BindView(R2.id.main_rdbtn_service) RadioButton mRDBtnService;
 	
 	
 	/** 用于对Fragment进行管理 */
@@ -43,8 +43,8 @@ public class MainActivity extends BaseFragmentActivityHeader implements OnChecke
 	@Override
 	protected void getViews() {
 		setContentView(R.layout.activity_main);// 配置布局文件
-		ButterKnife.inject(this);// ButterKnife 初始化，调用了这句后 前面注册控件的部分才有效
-		
+		ButterKnife.bind(this);// ButterKnife 初始化，调用了这句后 前面注册控件的部分才有效
+
 	}
 	@Override
 	protected void init() {
@@ -59,12 +59,11 @@ public class MainActivity extends BaseFragmentActivityHeader implements OnChecke
 		mRadioGroup.setOnCheckedChangeListener(this);
 		
 	}
-	
+
 	/**
 	 * 将所有的Fragment都置为隐藏状态。
-	 * @param transaction
-	 *            用于对Fragment执行操作的事务
-	 */
+	 * @param fragmentManager
+     */
 	private void hideFragments(FragmentManager fragmentManager) {
 		if (fragmentManager.getBackStackEntryCount() > 0) {
 			fragmentManager.popBackStackImmediate();

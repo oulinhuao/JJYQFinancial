@@ -31,11 +31,11 @@ import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 
+import butterknife.BindView;
 import butterknife.ButterKnife;
-import butterknife.InjectView;
-
 import com.proj.JJYQFinancial.BaseActivityHeader;
 import com.proj.JJYQFinancial.R;
+import com.proj.JJYQFinancial.R2;
 import com.proj.JJYQFinancial.dialog.LoadingDialog;
 import com.proj.JJYQFinancial.utils.EXDateHelper;
 import com.proj.JJYQFinancial.utils.EXNetWorkHelper;
@@ -66,7 +66,7 @@ import android.widget.AdapterView.OnItemClickListener;
 public class InfoListActivity extends BaseActivityHeader implements 
 	OnScrollListener{ //implements OnScrollListener{
 	
-	@InjectView(R.id.list_lv) MyListView mListView;
+	@BindView(R2.id.list_lv) MyListView mListView;
 	private LoadingDialog mLoadingDialog;
 	
 	private ListViewDataAdapter<Information, ViewHolder> adapter;
@@ -95,7 +95,7 @@ public class InfoListActivity extends BaseActivityHeader implements
 	@Override
 	protected void getViews() {
 		setContentView(R.layout.activity_list);
-		ButterKnife.inject(this);
+		ButterKnife.bind(this);
 	}
 	
 	
@@ -330,13 +330,13 @@ public class InfoListActivity extends BaseActivityHeader implements
 	
 	public class ViewHolder implements ViewHolderBase<Information> {
 	
-		@InjectView(R.id.info_title) TextView txtTitle;
-		@InjectView(R.id.info_time) TextView txtTime;
+		@BindView(R2.id.info_title) TextView txtTitle;
+		@BindView(R2.id.info_time) TextView txtTime;
 		
 		@Override
 		public View createView(LayoutInflater inflater, ViewGroup parent) {
 			View convertView = inflater.inflate(R.layout.list_item_info_txt, parent,false);
-			ButterKnife.inject(this, convertView);
+			ButterKnife.bind(this, convertView);
 			return convertView;
 		}
 

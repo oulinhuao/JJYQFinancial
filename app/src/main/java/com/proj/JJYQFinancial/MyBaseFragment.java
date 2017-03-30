@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 
@@ -64,9 +65,9 @@ public class MyBaseFragment extends Fragment {
 			LogHelper.errorLogging("Fragment布局不存在");
 			return;
 		}
-		ImageView returnBtn = null;
+		Button returnBtn = null;
 		if(returnBtn == null){
-			returnBtn = (ImageView)mRootView.findViewById(R.id.btn_return);
+			returnBtn = (Button)mRootView.findViewById(R.id.btn_return);
 		}
 		if(returnBtn != null){
 			returnBtn.setVisibility(View.INVISIBLE);
@@ -88,7 +89,7 @@ public class MyBaseFragment extends Fragment {
 	@Override
 	public void onDestroy() {
 		mIsFinish = true;
-		ButterKnife.reset(this);
+//		ButterKnife.Unbinder(this);
 		super.onDestroy();
 	}
 	

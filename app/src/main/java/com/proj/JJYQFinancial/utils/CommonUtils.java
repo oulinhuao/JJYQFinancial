@@ -261,8 +261,7 @@ public class CommonUtils {
 				back = true;
 			} else {
 				CommonHelper.showToast(content, String.format(
-						content.getString(R.string.sdcard_not_enough),
-						10), 0);
+						content.getString(R.string.sdcard_not_enough),"10"), 0);
 			}
 		} else {
 			CommonHelper.showToast(content, R.string.sdcard_not_exist, 0);
