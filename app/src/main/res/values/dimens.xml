@@ -1,0 +1,11 @@
+<resources>
+
+    <!-- 所有界面的padding -->
+    <dimen name="layout_padding">10dp</dimen>
+    <dimen name="layout_padding_10">10dp</dimen>
+    <dimen name="size_20">20sp</dimen>
+    
+    <dimen name="text_size_title">18dp</dimen>
+    
+    
+</resources>

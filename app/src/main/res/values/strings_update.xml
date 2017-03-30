@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="most_new_version">当前已是最新版本</string>
+    <string name="find_new_version">发现新版本</string>
+    <string name="current_version_connot_use">当前版本已无法使用，请更新新版</string>
+    <string name="waitting_other">请等待其他程序下载完毕</string>
+    <string name="version_update">发现可用的新版本,是否立即更新?</string>
+    <string name="version_update_cannt_use">发现可用的新版本,是否立即更新?(当前版本已停止使用)</string>
+    <string name="next_tip">下次再说</string>
+    <string name="install">安装</string>
+    <string name="downloading_update">正在下载更新\u2026</string>
+    
+</resources>

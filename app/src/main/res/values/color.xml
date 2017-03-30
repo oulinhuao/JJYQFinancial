@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="transparent">#00000000</color>
+    <color name="white">#ffffff</color>
+    <color name="white_tran">#d2d2d2</color>
+    <color name="black">#000000</color>
+    <color name="gray">#cccccc</color>
+    <color name="gray_dark">#362a2a</color>
+    <color name="green">#028100</color>
+    <color name="yellow">#fcc218</color>
+    <color name="bule">#1615f9</color>
+    <color name="red">#ff0000</color>
+    <color name="transparent_background">#80ffffff</color>
+    <color name="half_transparent_black_background">#80000000</color>
+    <color name="three_transparent_black_background">#30000000</color>
+    <color name="transparent_black_85">#c8000000</color>
+    <color name="clickabale">#ff8a0c</color>
+    
+    
+    <color name="background_window">#FFE5E5E5</color>
+    <color name="background_tab_pressed">#6633B5E5</color>
+    
+    <color name="title_bg">#16b783</color>
+    <color name="line">#73ffffff</color>
+    <color name="item_click">#fbede4</color>
+    
+    
+    
+    
+</resources>

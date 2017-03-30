@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">靖江市企e融服务平台</string>
+   
+    <string name="cache_path">JJYQFinancial/cache</string>
+    <string name="img_path">JJYQFinancial/File/img</string>
+    
+    <string name="sdcard_not_exist">内存卡不存在</string>
+    <string name="sdcard_not_enough">存储空间不足%1$sM</string>
+    <string name="sdcard_not_enough2">存储空间不足</string>
+    <string name="file_not_exist_nomal">文件不存在</string>
+    
+    <!-- 下拉刷新的listview的文字 -->
+    <string name="recently_updated">最近更新: </string>
+    <string name="no_recently_updated">最近更新: 无</string>
+    <string name="pull_down_refresh">下拉刷新</string>
+    <string name="progress_data_loading">加载中\u2026</string>
+    
+    
+    <string name="login">登录</string>
+    <string name="login_big">登&#160;&#160;&#160;&#160;录</string>
+    <string name="sure">确定</string>
+    <string name="sure_big">确&#160;&#160;&#160;&#160;定</string>
+    <string name="submit">提交</string>
+    <string name="cancle">取消</string>
+    <string name="login_account">用户名（手机号/邮箱）</string>
+    <string name="password">密码</string>
+    <string name="update">更新</string>
+    <string name="edit">编辑</string>
+    <string name="reedit">重写</string>
+    <string name="completed">完成</string>
+    
+    
+    <string name="progress_loading">数据加载中\u2026</string>
+    <string name="loading">加载中\u2026</string>
+    <string name="nonet">没有网络连接</string>
+    
+</resources>

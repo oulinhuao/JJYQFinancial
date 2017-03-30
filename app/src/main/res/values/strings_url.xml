@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    
+    <string name="server_address">www.kingdonsoft.com</string>
+    <string name="server_interface_virtualdir">zsnd</string>
+    <string name="server_interface_cate">MobielWebService/CategoryMobileService.asmx</string>
+    <string name="server_interface_info">MobielWebService/InformationMobileService.asmx</string>
+    
+    <!-- method -->
+    <string name="server_method_catelist">GetCategrayInfoList</string>
+    
+    <string name="server_method_InformationCount">GetInformationCount</string>
+    <string name="server_method_InformationList">GetInformationList</string>
+    <string name="server_method_InformationContent">GetInformation</string>
+    
+    
+    
+</resources>
