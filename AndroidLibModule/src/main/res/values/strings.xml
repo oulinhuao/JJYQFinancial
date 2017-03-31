@@ -1,0 +1,7 @@
+<resources>
+
+    <string name="kdmsp_down_soft_notice_titile">正在下载%1$s程序安装包\u2026</string>
+    <string name="kdmsp_down_soft_notice_path">KDDownLoad</string>
+    <string name="kdmsp_down_soft_complete">下载完成，请点击安装。</string>
+
+</resources>
