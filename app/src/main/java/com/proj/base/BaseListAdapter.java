@@ -40,7 +40,7 @@ public abstract class BaseListAdapter<T, Holder
     /**
      * 创建ViewHolder
      *
-     * @param parent   父布�??
+     * @param parent   父布局
      * @param position 当前位置
      * @return Viewholder
      */
